@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Application</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <h1>Weather Forecast</h1>
+        <form id="search-form">
+          <div class="row">
+            <div class="col-5">
+              <input
+                type="text"
+                placeholder="Enter name of city"
+                class="form-control"
+                id="search-input"
+              />
+            </div>
+            <div class="col-3">
+              <input type="submit" class="submit-button form-control" />
+            </div>
+            <div class="col-4">
+              <input
+                type="submit"
+                value="Current Location"
+                class="location-button form-control"
+                id="current-location-button"
+              />
+            </div>
+          </div>
+        </form>
+        <br />
+        <h2 id="city">Toronto</h2>
+        <div class="row">
+          <div class="col-4">
+            <ul>
+              <li id="current-time">Friday 4:26 PM</li>
+              <li id="description">Cloudy ☁️</li>
+              <li id="temperature">4°C</li>
+            </ul>
+          </div>
+          <div class="col-8">
+            <ul>
+              <li>Humidity:<span id="humid">56</span>%</li>
+              <li>Wind:<span id="windy">30</span>km/h</li>
+              <li id="real-feel">Real feel - 2°C 🥶</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row forecast">
+          <div class="col-2">
+            <p>
+              Sat
+              <br />
+              🌧
+              <br />
+              4°C
+            </p>
+          </div>
+          <div class="col-2">
+            <p>
+              Sun
+              <br />
+              🌦
+              <br />
+              -2°C
+            </p>
+          </div>
+          <div class="col-2">
+            <p>
+              Mon
+              <br />
+              ☁️
+              <br />
+              4°C
+            </p>
+          </div>
+          <div class="col-2">
+            <p>
+              Tues
+              <br />
+              🌥
+              <br />
+              2°C
+            </p>
+          </div>
+          <div class="col-2">
+            <p>
+              Wed
+              <br />
+              🌦
+              <br />
+              1°C
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
