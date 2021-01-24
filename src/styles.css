@@ -20,6 +20,10 @@ h1 {
   padding-bottom: 10px;
 }
 
+span {
+  color: black;
+}
+
 .weather-app {
   max-width: 600px;
   border: 1px solid #222831;
@@ -52,8 +56,4 @@ h1 {
 
 .forecast {
   max-width: 600px;
-}
-
-.open-source {
-  color: black;
 }
