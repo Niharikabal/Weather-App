@@ -53,3 +53,7 @@ h1 {
 .forecast {
   max-width: 600px;
 }
+
+.open-source {
+  color: black;
+}
