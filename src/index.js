@@ -13,7 +13,7 @@
  
   let time = document.querySelector("#current-time")
 
-  time.innerHTML = (`${day} ${hour}:${minute}`)
+  time.innerHTML = (`${day} ${hour}:${minute} EST`)
 
   function searchCity(city){
     let apiKey = "57822825e6d539b302a053aaa93198f7"
