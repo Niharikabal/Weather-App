@@ -15,11 +15,34 @@
 
   time.innerHTML = (`${day} ${hour}:${minute} EST`)
 
+  //function showForecast(response){
+    //let forecastElement = document.querySelector ("#forecast")
+    //forecastElement.innerHTML = null;
+    //let forecast = null;
+
+    //for (let index = 0; index < 6; index++) {
+    //forecast = response.data.list[index];
+    //forecastElement.innerHTML += `
+    //<div class="col-2">
+      //<h3>
+        //${formatHours(forecast.dt * 1000)}
+      //</h3>
+      //<img
+        //src="http://openweathermap.org/img/wn/${
+          //forecast.weather[0].icon
+        //}@2x.png"
+      ///>
+  //`;
+  //}
+  //}
+
   function searchCity(city){
     let apiKey = "57822825e6d539b302a053aaa93198f7"
      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-
      axios.get(apiUrl).then(showWeather)
+
+     //apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
+     //axios.get(apiUrl).then(showForecast)
 
   }
 
@@ -51,7 +74,7 @@
 
 }
 
-searchCiy("Toronto")
+searchCity("Toronto")
 
 function searchLocation(position){
   let apiKey = "57822825e6d539b302a053aaa93198f7"
@@ -66,7 +89,7 @@ function getCurrentLocation(event){
   navigator.geolocation.getCurrentPosition(searchLocation)
 
 }
-let curentLocationButton = document.querySelector("#current-location-button")
+let currentLocationButton = document.querySelector("#current-location-button")
 currentLocationButton.addEventListener ("click", getCurrentLocation)
 
 
